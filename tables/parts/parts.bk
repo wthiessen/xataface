@@ -1,0 +1,32 @@
+<?php
+
+
+
+class tables_parts {
+  
+  function quantity__renderCell(Dataface_Record $record){
+  
+	
+  
+    Dataface_JavascriptTool::getInstance()
+      ->import('editable_status2.js');
+
+
+    $currVal = $record->val('Quantity');
+	$currID = $record->val('PartID');
+    $out = array();
+	
+	
+    $out[] = '<form id="myform" method="POST" action="#" class="status-drop-down">
+    <input type="button" value="–" class="qtyminus" field="quantity'.$currID.'" style="font-weight: bold;" />
+    <input type="select" class="status-drop-down" data-record-id="'.htmlspecialchars($record->getId()).'" name="quantity'.$currID.'" value="'.$currVal.'" size="4"/>
+    <input type="button" value="+" class="qtyplus" field="quantity'.$currID.'" style="font-weight: bold;" />
+</form>';
+	//
+
+    return implode("\n", $out);
+  }
+  
+  
+  
+}

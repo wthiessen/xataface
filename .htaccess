@@ -1,0 +1,4 @@
+<FilesMatch "\.ini$">
+php_flag display_errors on
+Deny from all
+</FilesMatch>

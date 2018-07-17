@@ -1,0 +1,30 @@
+<?php
+class tables_issues {
+  ...
+  function status__renderCell(Dataface_Record $record){
+  
+    Dataface_JavascriptTool::getInstance()
+      ->import('editable_status.js');
+      
+    $options = array(
+      'Select...',
+      'Open',
+      'Closed',
+    );
+    $currVal = $record->val('status');
+    $out = array();
+    $out[] = '<select class="status-drop-down" 
+      data-record-id="'.htmlspecialchars($record->getId()).'">';
+    foreach ( $options as $opt ){
+      $selected = ($currVal === $opt) ? 'selected':'';
+      $out[] = '<option value="'.htmlspecialchars($opt).'" '.$selected.'>'
+        .htmlspecialchars($opt).'</option>';
+      
+    }
+    $out[] = '</select>';
+    return implode("\n", $out);
+  }
+  
+  ...
+  
+}

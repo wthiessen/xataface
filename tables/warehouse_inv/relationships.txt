@@ -1,0 +1,2 @@
+[nav_inv]
+nav_inv.Part_Number = "$SHARK_PART_#"

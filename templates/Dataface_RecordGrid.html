@@ -1,0 +1,18 @@
+<table id="{$id}" class="listing {$class}">
+    <thead>
+        <tr>
+        {foreach from=$labels item=label}
+        <th><a class="unmarked_link">{$label}</a></th>
+        {/foreach}
+        </tr>
+    </thead>
+    <tbody>
+        {section name=row loop=$data}
+        <tr class="listing {cycle values="even,odd"}">
+            {foreach from=$columns item=col}
+            <td><a href="" class="unmarked_link">{$data[row][$col]}</a></td>
+            {/foreach}
+        </tr>
+        {/section}
+    </tbody>
+</table>

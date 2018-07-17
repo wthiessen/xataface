@@ -1,0 +1,8 @@
+a#list-actions-view_menu-link,
+a#list-actions-update_results-link,
+div#top-right-menu-bar,
+a#list-actions-export_list-link {
+	display: none;
+}
+
+

@@ -1,0 +1,32 @@
+;debug=1;
+;default_browse_action=edit
+
+[_prefs]
+  ; disable_ajax_record_details=0
+
+[_database]
+    host=localhost
+    name=sharkmarine
+    user=root
+    password=root
+	;driver=mysqli
+
+[_tables]
+
+
+
+
+[history]
+enabled = 1
+
+
+[_modules]
+;modules_depselect=modules/depselect/depselect.php
+;modules_DataGrid=modules/DataGrid/DataGrid.php
+;modules_ShoppingCart=modules/ShoppingCart/ShoppingCart.php
+
+[_auth]
+;users_table = Users
+;username_column = UserName
+;password_column = Password
+
